@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <h1>Jogo da Velha</h1>
+    <div>
+      <label for="player1">X</label>
+      <input
+        value=""
+        required
+        type="text"
+        id="player1"
+        placeholder="Nome do Jogador 1"
+      />
+    </div>
+    <div>
+      <label for="player2">O</label>
+      <input
+        value=""
+        type="text"
+        id="player2"
+        placeholder="Nome do Jogador 2"
+      />
+    </div>
+    <div id="buttonsDiv">
+      <button id="start">Começar!</button>
+    </div>
+
+    <h2 id="status">Vez do jogador : <span id="turnPlayer"></span></h2>
+    <section id="gameBoard" data-player="x" class="gameBoardX">
+      <button disabled class="cursor-pointer" data-region="0.0"></button>
+      <button disabled class="cursor-pointer" data-region="0.1"></button>
+      <button disabled class="cursor-pointer" data-region="0.2"></button>
+      <button disabled class="cursor-pointer" data-region="1.0"></button>
+      <button disabled class="cursor-pointer" data-region="1.1"></button>
+      <button disabled class="cursor-pointer" data-region="1.2"></button>
+      <button disabled class="cursor-pointer" data-region="2.0"></button>
+      <button disabled class="cursor-pointer" data-region="2.1"></button>
+      <button disabled class="cursor-pointer" data-region="2.2"></button>
+    </section>
+  </body>
+</html>

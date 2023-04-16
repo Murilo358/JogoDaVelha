@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background: linear-gradient(90deg, #000000 0%, #550000 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input {
+  border: 2px solid #000000;
+  margin: 10px;
+  border-radius: 2px;
+  color: white;
+  background-color: #252525;
+  padding: 20px;
+}
+
+button {
+  margin-top: 20px;
+  color: white;
+  padding: 5px;
+  background-color: #252525;
+}
+
+.x::before {
+  content: "";
+  background: #bb1b1b;
+  height: calc(80px * 0.15);
+  width: calc(80px * 0.9);
+}
+.x:after {
+  position: absolute;
+  content: "";
+  background: #bb1b1b;
+  height: calc(80px * 0.15);
+  width: calc(80px * 0.9);
+}
+.x::before {
+  transform: rotate(-45deg);
+}
+.x::after {
+  transform: rotate(45deg);
+}
+
+.o:after {
+  position: absolute;
+  content: "";
+  border: #bb1b1b 5px solid;
+  border-radius: 50%;
+  height: calc(80px * 0.9);
+  width: calc(80px * 0.9);
+}
+
+#gameBoard {
+  display: grid;
+  height: 500px;
+  width: 500px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.cursor-pointer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  border: #fff 1px solid;
+}
+
+@media (max-width: 550px) {
+  #gameBoard {
+    height: 400px;
+    width: 90%;
+  }
+}
+@media (max-width: 350px) {
+  #gameBoard {
+    height: 300px;
+    width: 100%;
+  }
+}
+@media (min-width: 1930px) {
+  #gameBoard {
+    height: 700px;
+    width: 700px;
+  }
+  body {
+    font-size: 25px;
+  }
+  button {
+    padding: 20px;
+  }
+  input {
+    padding: 30px;
+    font-size: 25px;
+  }
+}
